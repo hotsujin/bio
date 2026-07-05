@@ -80,7 +80,10 @@ for p in data["platforms"]:
         if old != p["count"]:
             changed.append(f"{p['label']}: {old} → {p['count']}")
 
-data["asOf"] = date.today().isoformat()
+if ig or gh:
+    data["asOf"] = date.today().isoformat()
+else:
+    print("⚠️ 모든 플랫폼 수집 실패 — asOf 미갱신 (기존 날짜 유지)")
 json.dump(data, open(path, "w"), ensure_ascii=False, indent=2)
 open(path, "a").write("\n")
 
@@ -92,7 +95,7 @@ PY
 
 if [ "$DO_DEPLOY" = true ]; then
     echo ""
-    echo "🚀 배포 중 (git push → GitHub Pages 자동 반영)..."
+    echo "🚀 git push 중... (Pages 활성화 상태면 1~2분 내 사이트 반영)"
     git add assets/followers.json
     git diff --cached --quiet || git commit -m "chore: SNS 팔로워 수 갱신"
     git push
