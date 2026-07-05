@@ -639,6 +639,153 @@
         }
         .link-arrow svg { width: 18px; height: 18px; }
 
+        .section-body { padding: 0 24px 12px; }
+        .section-body .cred-list { margin-top: 0; }
+        .section-note {
+            padding: 0 24px 14px;
+            color: var(--fg-subtle);
+            font-size: 12.5px;
+            font-weight: 650;
+            line-height: 1.45;
+        }
+
+        .curri-group { margin-bottom: 12px; }
+        .curri-group:last-child { margin-bottom: 0; }
+        .curri-group h3 {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            margin: 0 0 8px;
+            color: var(--fg);
+            font-size: 13px;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+        .curri-group h3::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--brand-bright);
+        }
+        [data-theme="dark"] .curri-group h3::before { background: var(--accent); }
+        .curri-list { display: flex; flex-wrap: wrap; gap: 7px; }
+        .curri-chip {
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            color: var(--fg-muted);
+            padding: 8px 12px;
+            font-size: 12.5px;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        #gallery[hidden] { display: none; }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            grid-auto-rows: 104px;
+            grid-auto-flow: dense;
+            gap: 8px;
+            padding: 0 24px 12px;
+        }
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            background: var(--bg-subtle);
+            cursor: zoom-in;
+            padding: 0;
+            min-width: 0;
+            color: inherit;
+            transition: transform .16s, border-color .16s, box-shadow .16s;
+        }
+        .gallery-item.wide { grid-column: span 2; }
+        .gallery-item.tall { grid-row: span 2; }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .35s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-2px);
+            border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+            box-shadow: 0 18px 38px -30px color-mix(in srgb, var(--accent) 48%, transparent);
+        }
+        .gallery-item:hover img { transform: scale(1.04); }
+        .gallery-note {
+            padding: 0 24px 14px;
+            color: var(--fg-subtle);
+            font-size: 12.5px;
+            font-weight: 650;
+            line-height: 1.45;
+        }
+        .gallery-lightbox[hidden] { display: none; }
+        .gallery-lightbox {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            display: grid;
+            grid-template-columns: 56px minmax(0, 1fr) 56px;
+            grid-template-rows: auto minmax(0, 1fr) auto;
+            gap: 14px;
+            align-items: center;
+            padding: 22px;
+            background: rgba(6,8,10,.92);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+        }
+        .gallery-lightbox img {
+            grid-column: 2;
+            grid-row: 2;
+            justify-self: center;
+            align-self: center;
+            max-width: min(100%, 1080px);
+            max-height: 82dvh;
+            border-radius: 22px;
+            box-shadow: 0 28px 90px rgba(0,0,0,.55);
+            object-fit: contain;
+        }
+        .gallery-close, .gallery-prev, .gallery-next {
+            border: 1px solid rgba(255,255,255,.18);
+            background: rgba(255,255,255,.12);
+            color: #fff;
+            cursor: pointer;
+            display: grid;
+            place-items: center;
+            transition: background .15s, transform .15s;
+        }
+        .gallery-close:hover, .gallery-prev:hover, .gallery-next:hover { background: rgba(255,255,255,.22); transform: translateY(-1px); }
+        .gallery-close {
+            grid-column: 3;
+            grid-row: 1;
+            justify-self: end;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            font-size: 24px;
+        }
+        .gallery-prev, .gallery-next {
+            grid-row: 2;
+            width: 48px;
+            height: 48px;
+            border-radius: 999px;
+            font-size: 28px;
+        }
+        .gallery-prev { grid-column: 1; }
+        .gallery-next { grid-column: 3; }
+        .gallery-count {
+            grid-column: 1 / -1;
+            grid-row: 3;
+            justify-self: center;
+            color: rgba(255,255,255,.76);
+            font-size: 13px;
+            font-weight: 750;
+        }
+
         .focus {
             margin: 16px 24px 0;
             padding: 20px;
@@ -731,6 +878,15 @@
             .section-head p { white-space: normal; }
             .link { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; padding: 13px; }
             .link-ico { width: 44px; height: 44px; border-radius: 15px; }
+            .section-body { padding-left: 18px; padding-right: 18px; }
+            .section-note { padding-left: 18px; padding-right: 18px; }
+            .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); grid-auto-rows: 128px; padding-left: 18px; padding-right: 18px; }
+            .gallery-item.wide { grid-column: span 2; }
+            .gallery-note { padding-left: 18px; padding-right: 18px; }
+            .gallery-lightbox { grid-template-columns: 44px minmax(0, 1fr) 44px; padding: 14px; gap: 8px; }
+            .gallery-prev, .gallery-next { width: 42px; height: 42px; font-size: 24px; }
+            .gallery-close { width: 40px; height: 40px; }
+            .gallery-lightbox img { max-height: 78dvh; border-radius: 18px; }
             .focus { margin-inline: 18px; padding: 18px; }
             .focus-list { grid-template-columns: 1fr; }
         }
@@ -860,6 +1016,89 @@
                 </div>
             </section>
 
+            <section aria-labelledby="curri-title" id="curriculum">
+                <div class="section-head">
+                    <h2 id="curri-title" data-ko="강의 커리큘럼" data-en="Lecture Curriculum">강의 커리큘럼</h2>
+                    <p data-ko="기업 수요에 따라 블록 조합" data-en="Custom blocks per organization">기업 수요에 따라 블록 조합</p>
+                </div>
+                <p class="section-desc" data-ko="아래 블록을 조합해 조직·직무에 맞는 과정으로 구성합니다. 이론과 실습을 섞어 반나절 특강부터 다회차 정규 과정까지 만듭니다." data-en="I combine these blocks into programs that fit each organization — from half-day talks to multi-session courses, mixing theory and hands-on work.">아래 블록을 조합해 조직·직무에 맞는 과정으로 구성합니다. 이론과 실습을 섞어 반나절 특강부터 다회차 정규 과정까지 만듭니다.</p>
+                <div class="section-body">
+                    <div class="curri-group">
+                        <h3 data-ko="이론 중심" data-en="Theory">이론 중심</h3>
+                        <div class="curri-list">
+                            <span class="curri-chip" data-ko="비전공자를 위한 생성AI 이론" data-en="GenAI theory for non-majors">비전공자를 위한 생성AI 이론</span>
+                            <span class="curri-chip" data-ko="산업군·직무별 생성AI 활용현황 분석" data-en="GenAI use-case analysis by industry &amp; role">산업군·직무별 생성AI 활용현황 분석</span>
+                            <span class="curri-chip" data-ko="생성AI 소개·비교 (GPT·Gemini·분야별 툴)" data-en="GenAI landscape (GPT · Gemini · domain tools)">생성AI 소개·비교 (GPT·Gemini·분야별 툴)</span>
+                            <span class="curri-chip" data-ko="프롬프트 엔지니어링 기초" data-en="Prompt engineering basics">프롬프트 엔지니어링 기초</span>
+                            <span class="curri-chip" data-ko="프롬프트 엔지니어링 심화" data-en="Advanced prompt engineering">프롬프트 엔지니어링 심화</span>
+                        </div>
+                    </div>
+                    <div class="curri-group">
+                        <h3 data-ko="실습 중심" data-en="Hands-on">실습 중심</h3>
+                        <div class="curri-list">
+                            <span class="curri-chip" data-ko="ChatGPT 활용법 (무료/유료)" data-en="Using ChatGPT (free &amp; paid)">ChatGPT 활용법 (무료/유료)</span>
+                            <span class="curri-chip" data-ko="데이터 분석·데이터 시각화" data-en="Data analysis &amp; visualization">데이터 분석·데이터 시각화</span>
+                            <span class="curri-chip" data-ko="AI + 워드·엑셀·PPT" data-en="AI + Word · Excel · PPT">AI + 워드·엑셀·PPT</span>
+                            <span class="curri-chip" data-ko="비즈니스 글쓰기 — 이메일·보고서·사업계획서" data-en="Business writing — email · reports · biz plans">비즈니스 글쓰기 — 이메일·보고서·사업계획서</span>
+                            <span class="curri-chip" data-ko="생성AI 활용 업무생산성 향상" data-en="Productivity with GenAI">생성AI 활용 업무생산성 향상</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="records-title" id="records">
+                <div class="section-head">
+                    <h2 id="records-title" data-ko="출강·교육 이력" data-en="Teaching &amp; Training History">출강·교육 이력</h2>
+                    <p data-ko="최근 주요 강의" data-en="Recent highlights">최근 주요 강의</p>
+                </div>
+                <div class="section-body">
+                    <div class="cred-list" aria-label="출강 이력" data-label-ko="출강 이력" data-label-en="Teaching history">
+                        <p class="cred"><strong data-ko="한국화이자제약" data-en="Pfizer Korea">한국화이자제약</strong><span data-ko="2025~2026 · 마케팅팀 AI 전략 분석·업무 자동화, 부서별 AI 프롬프톤" data-en="2025–2026 · AI marketing strategy &amp; automation, per-team prompt-a-thons">2025~2026 · 마케팅팀 AI 전략 분석·업무 자동화, 부서별 AI 프롬프톤</span></p>
+                        <p class="cred"><strong data-ko="GS건설" data-en="GS E&amp;C">GS건설</strong><span data-ko="2024·2026 · 생성AI 활용현황 분석, 직군별 업무자동화 챗봇·홍보영상 제작" data-en="2024 &amp; 2026 · GenAI adoption analysis, role-specific automation chatbots &amp; team videos">2024·2026 · 생성AI 활용현황 분석, 직군별 업무자동화 챗봇·홍보영상 제작</span></p>
+                        <p class="cred"><strong data-ko="공공기관" data-en="Public sector">공공기관</strong><span data-ko="2025~2026 · 한국수력원자력·한국열병합공사 등 — 임원급 의사결정권자·임직원 생성AI 교육" data-en="2025–2026 · KHNP, KDHC etc. — GenAI training for executives &amp; staff">2025~2026 · 한국수력원자력·한국열병합공사 등 — 임원급 의사결정권자·임직원 생성AI 교육</span></p>
+                        <p class="cred"><strong data-ko="금융기업" data-en="Finance">금융기업</strong><span data-ko="2024~2026 · 신협·BNK투자증권·DB손해보험·iM뱅크 등 — AI 데이터 분석·업무 자동화" data-en="2024–2026 · Shinhyup, BNK Securities, DB Insurance, iM Bank etc. — AI data analysis &amp; automation">2024~2026 · 신협·BNK투자증권·DB손해보험·iM뱅크 등 — AI 데이터 분석·업무 자동화</span></p>
+                        <p class="cred"><strong data-ko="대학 (임직원)" data-en="Universities (staff)">대학 (임직원)</strong><span data-ko="2023~2026 · 포항공대·인하대·인천대 등 — 분기별 정기교육, 타 부서·학생 연계" data-en="2023–2026 · POSTECH, Inha, Incheon Nat'l Univ. — quarterly programs">2023~2026 · 포항공대·인하대·인천대 등 — 분기별 정기교육, 타 부서·학생 연계</span></p>
+                        <p class="cred"><strong data-ko="대학 (학생)" data-en="Universities (students)">대학 (학생)</strong><span data-ko="2024~2026 · 연세대·인하대 등 — 연구·개발을 위한 AI 리터러시 교육" data-en="2024–2026 · Yonsei, Inha etc. — AI literacy for research &amp; development">2024~2026 · 연세대·인하대 등 — 연구·개발을 위한 AI 리터러시 교육</span></p>
+                        <p class="cred"><strong data-ko="AI 특성화고" data-en="AI high schools">AI 특성화고</strong><span data-ko="2024~2026 · 서울인공지능고·광운인공지능고·미림마이스터고 등 — 자문위원·집필진·대표강사, 교육부·한국과학창의재단 주관, 프롬프트 엔지니어 양성 고급과정" data-en="2024–2026 · Seoul AI HS, Kwangwoon AI HS, Mirim Meister HS — advisor, author &amp; lead instructor (MOE &amp; KOFAC programs)">2024~2026 · 서울인공지능고·광운인공지능고·미림마이스터고 등 — 자문위원·집필진·대표강사, 교육부·한국과학창의재단 주관, 프롬프트 엔지니어 양성 고급과정</span></p>
+                        <p class="cred"><strong data-ko="뤼튼테크놀로지스" data-en="Wrtn">뤼튼테크놀로지스</strong><span data-ko="2023~2026 · 공식 컨설턴트·대표강사 — 선도교사 웨비나, 유저 대상 생성AI 컨퍼런스" data-en="2023–2026 · Certified consultant &amp; lead instructor — teacher webinars, user conferences">2023~2026 · 공식 컨설턴트·대표강사 — 선도교사 웨비나, 유저 대상 생성AI 컨퍼런스</span></p>
+                        <p class="cred"><strong data-ko="SBS컴퓨터학원" data-en="SBS Academy">SBS컴퓨터학원</strong><span data-ko="2025~2026 · 주강사 대상 커리큘럼 구성 방법론·AI 리터러시 교육" data-en="2025–2026 · Curriculum-design methodology &amp; AI literacy for lead instructors">2025~2026 · 주강사 대상 커리큘럼 구성 방법론·AI 리터러시 교육</span></p>
+                        <p class="cred"><strong data-ko="한국AI리터러시협회" data-en="KAILA">한국AI리터러시협회</strong><span data-ko="2025~2026 · 협회원 대상 AI 강의 구성 방법론, AI 업무 자동화·데이터 분석" data-en="2025–2026 · Lecture-design methodology, AI automation &amp; data analysis for members">2025~2026 · 협회원 대상 AI 강의 구성 방법론, AI 업무 자동화·데이터 분석</span></p>
+                    </div>
+                </div>
+                <p class="section-note" data-ko="이외 다수 기관 자문·운영·강의 진행 (강사 이력서 26.05 기준)" data-en="Plus advisory, program operation, and lectures for many more organizations (as of the May 2026 CV)">이외 다수 기관 자문·운영·강의 진행 (강사 이력서 26.05 기준)</p>
+            </section>
+
+            <section aria-labelledby="sucon-title" id="sucon">
+                <div class="section-head">
+                    <h2 id="sucon-title" data-ko="수콘 창업 트랙" data-en="Sucon Startup Track">수콘 창업 트랙</h2>
+                    <p data-ko="누적 지원/투자 4억원" data-en="₩400M cumulative funding">누적 지원/투자 4억원</p>
+                </div>
+                <div class="section-body">
+                    <div class="cred-list" aria-label="수콘 선정·수상 이력" data-label-ko="수콘 선정·수상 이력" data-label-en="Sucon awards &amp; selections">
+                        <p class="cred"><strong data-ko="최우수" data-en="Top honors">최우수</strong><span data-ko="예비창업패키지 선정·최우수 졸업 / 연세대학교 창업경진대회 최우수상" data-en="Pre-Startup Package — top graduate / Yonsei startup competition — grand prize">예비창업패키지 선정·최우수 졸업 / 연세대학교 창업경진대회 최우수상</span></p>
+                        <p class="cred"><strong data-ko="우수" data-en="Honors">우수</strong><span data-ko="청년창업사관학교 선정·우수 졸업 / 서울시 캠퍼스타운(연세대) 선정·우수상" data-en="Youth Startup Academy — honors graduate / Seoul Campus Town (Yonsei) — excellence award">청년창업사관학교 선정·우수 졸업 / 서울시 캠퍼스타운(연세대) 선정·우수상</span></p>
+                        <p class="cred"><strong data-ko="선정" data-en="Selected">선정</strong><span data-ko="경기도차세대융합기술연구원 창업지원 / KT 데이터바우처 / 연세 스타트업 인큐베이팅 실전창업팀 (해외연수 지원)" data-en="AICT startup support / KT Data Voucher / Yonsei startup incubating team (overseas program)">경기도차세대융합기술연구원 창업지원 / KT 데이터바우처 / 연세 스타트업 인큐베이팅 실전창업팀 (해외연수 지원)</span></p>
+                    </div>
+                </div>
+            </section>
+
+            <section aria-labelledby="gallery-title" id="gallery" hidden>
+                <div class="section-head">
+                    <h2 id="gallery-title" data-ko="현장 갤러리" data-en="In the Room">현장 갤러리</h2>
+                    <p id="galleryHeadCount"></p>
+                </div>
+                <p class="gallery-note" data-ko="강의·워크샵 현장의 기록입니다. 사진을 누르면 크게 볼 수 있습니다." data-en="Scenes from lectures and workshops. Tap a photo to enlarge it.">강의·워크샵 현장의 기록입니다. 사진을 누르면 크게 볼 수 있습니다.</p>
+                <div class="gallery-grid" id="galleryGrid"></div>
+            </section>
+
+            <div class="gallery-lightbox" id="galleryLightbox" role="dialog" aria-modal="true" aria-label="현장 사진 크게 보기" data-label-ko="현장 사진 크게 보기" data-label-en="View field photo" hidden>
+                <button class="gallery-close" id="galleryClose" type="button" aria-label="닫기" data-label-ko="닫기" data-label-en="Close">×</button>
+                <button class="gallery-prev" id="galleryPrev" type="button" aria-label="이전 사진" data-label-ko="이전 사진" data-label-en="Previous photo">‹</button>
+                <img id="galleryLightboxImage" src="" alt="">
+                <button class="gallery-next" id="galleryNext" type="button" aria-label="다음 사진" data-label-ko="다음 사진" data-label-en="Next photo">›</button>
+                <div class="gallery-count" id="galleryCount"></div>
+            </div>
+
             <section class="focus" aria-labelledby="focus-title">
                 <h2 id="focus-title" data-ko="지금 만드는 것" data-en="What I'm Building">지금 만드는 것</h2>
                 <p data-ko="강의 현장에서 만난 질문이 시스템이 되고, 시스템의 기록이 다시 강의와 콘텐츠가 됩니다. 이 페이지는 그 모든 작업으로 들어가는 가장 짧은 관문입니다." data-en="Questions from the lecture room become systems; the system's records become lectures and content again. This page is the shortest gateway into all of it.">강의 현장에서 만난 질문이 시스템이 되고, 시스템의 기록이 다시 강의와 콘텐츠가 됩니다. 이 페이지는 그 모든 작업으로 들어가는 가장 짧은 관문입니다.</p>
@@ -934,6 +1173,12 @@
                 document.querySelectorAll("[data-alt-ko][data-alt-en]").forEach(function (el) {
                     el.setAttribute("alt", currentLang === "en" ? el.getAttribute("data-alt-en") : el.getAttribute("data-alt-ko"));
                 });
+                Array.prototype.forEach.call(document.querySelectorAll("[data-gallery-index]"), function (thumb, i) {
+                    thumb.setAttribute("aria-label", currentLang === "en" ? "Enlarge field photo " + (i + 1) : "현장 갤러리 사진 " + (i + 1) + " 확대");
+                    var thumbImg = thumb.querySelector("img");
+                    if (thumbImg) thumbImg.setAttribute("alt", (currentLang === "en" ? "Field photo " : "현장 사진 ") + (i + 1));
+                });
+                updateGalleryMeta();
                 langBtn.textContent = currentLang === "en" ? "KO" : "EN";
                 langBtn.setAttribute("aria-label", currentLang === "en" ? "한국어로 전환" : "Switch to English");
                 setTheme(root.getAttribute("data-theme") || (prefersDark ? "dark" : "light"));
@@ -1023,6 +1268,128 @@
                         copyBtn.removeAttribute("data-copied");
                     }, 1600);
                 });
+            });
+
+            // 현장 갤러리 — assets/gallery/photo-01.jpg ~ photo-24 (jpg/jpeg/png/webp)를
+            // 자동 감지해 표시. 한 장도 없으면 섹션 전체 숨김 유지 (파일만 넣으면 뜸).
+            var gallerySection = document.getElementById("gallery");
+            var galleryGrid = document.getElementById("galleryGrid");
+            var galleryHeadCount = document.getElementById("galleryHeadCount");
+            var galleryLightbox = document.getElementById("galleryLightbox");
+            var galleryImage = document.getElementById("galleryLightboxImage");
+            var galleryCountEl = document.getElementById("galleryCount");
+            var galleryClose = document.getElementById("galleryClose");
+            var galleryPrev = document.getElementById("galleryPrev");
+            var galleryNext = document.getElementById("galleryNext");
+            var galleryButtons = [];
+            var galleryIndex = 0;
+            var galleryTrigger = null;
+            var GALLERY_MAX = 24;
+            var GALLERY_EXTS = ["jpg", "jpeg", "png", "webp"];
+
+            function updateGalleryMeta() {
+                if (!galleryHeadCount || !galleryButtons.length) return;
+                galleryHeadCount.textContent = currentLang === "en"
+                    ? galleryButtons.length + " photos"
+                    : galleryButtons.length + "장의 기록";
+            }
+
+            function probeGalleryPhoto(n, extIndex, done) {
+                if (extIndex >= GALLERY_EXTS.length) { done(null); return; }
+                var num = (n < 10 ? "0" : "") + n;
+                var src = "assets/gallery/photo-" + num + "." + GALLERY_EXTS[extIndex];
+                var img = new Image();
+                img.onload = function () { done({ src: src, w: img.naturalWidth, h: img.naturalHeight }); };
+                img.onerror = function () { probeGalleryPhoto(n, extIndex + 1, done); };
+                img.src = src;
+            }
+
+            function renderGallery(photos) {
+                photos.forEach(function (p, i) {
+                    var btn = document.createElement("button");
+                    btn.className = "gallery-item";
+                    if (p.h > p.w * 1.15) btn.classList.add("tall");
+                    else if (p.w > p.h * 1.6) btn.classList.add("wide");
+                    btn.type = "button";
+                    btn.setAttribute("data-gallery-index", String(i));
+                    btn.setAttribute("aria-label", currentLang === "en" ? "Enlarge field photo " + (i + 1) : "현장 갤러리 사진 " + (i + 1) + " 확대");
+                    var img = document.createElement("img");
+                    img.loading = "lazy";
+                    img.decoding = "async";
+                    img.src = p.src;
+                    img.alt = (currentLang === "en" ? "Field photo " : "현장 사진 ") + (i + 1);
+                    img.width = p.w;
+                    img.height = p.h;
+                    btn.appendChild(img);
+                    btn.addEventListener("click", function () { showGallery(i); });
+                    galleryGrid.appendChild(btn);
+                    galleryButtons.push(btn);
+                });
+                gallerySection.hidden = false;
+                updateGalleryMeta();
+            }
+
+            (function loadGallery() {
+                if (!galleryGrid) return;
+                var results = [];
+                var pending = GALLERY_MAX;
+                for (var n = 1; n <= GALLERY_MAX; n++) {
+                    (function (n) {
+                        probeGalleryPhoto(n, 0, function (photo) {
+                            results[n] = photo;
+                            pending -= 1;
+                            if (pending === 0) {
+                                var found = results.filter(Boolean);
+                                if (found.length) renderGallery(found);
+                            }
+                        });
+                    })(n);
+                }
+            })();
+
+            function showGallery(index) {
+                if (!galleryButtons.length) return;
+                galleryIndex = (index + galleryButtons.length) % galleryButtons.length;
+                var img = galleryButtons[galleryIndex].querySelector("img");
+                galleryImage.src = img.getAttribute("src");
+                galleryImage.alt = img.getAttribute("alt") || "현장 사진";
+                galleryCountEl.textContent = (galleryIndex + 1) + " / " + galleryButtons.length;
+                if (galleryLightbox.hidden) {
+                    galleryTrigger = document.activeElement;
+                    galleryLightbox.hidden = false;
+                    document.body.style.overflow = "hidden";
+                    galleryClose.focus();
+                }
+            }
+            function closeGallery() {
+                galleryLightbox.hidden = true;
+                galleryImage.removeAttribute("src");
+                document.body.style.overflow = "";
+                if (galleryTrigger && typeof galleryTrigger.focus === "function") galleryTrigger.focus();
+                galleryTrigger = null;
+            }
+            function stepGallery(delta) { showGallery(galleryIndex + delta); }
+
+            galleryClose.addEventListener("click", closeGallery);
+            galleryPrev.addEventListener("click", function () { stepGallery(-1); });
+            galleryNext.addEventListener("click", function () { stepGallery(1); });
+            galleryLightbox.addEventListener("click", function (event) {
+                if (event.target === galleryLightbox) closeGallery();
+            });
+            document.addEventListener("keydown", function (event) {
+                if (galleryLightbox.hidden) return;
+                if (event.key === "Escape") closeGallery();
+                if (event.key === "ArrowLeft") stepGallery(-1);
+                if (event.key === "ArrowRight") stepGallery(1);
+                if (event.key === "Tab") {
+                    var order = [galleryClose, galleryPrev, galleryNext];
+                    var idx = order.indexOf(document.activeElement);
+                    event.preventDefault();
+                    var next = event.shiftKey
+                        ? (idx <= 0 ? order.length - 1 : idx - 1)
+                        : (idx === -1 || idx === order.length - 1 ? 0 : idx + 1);
+                    order[next].focus();
+                }
             });
 
             var snsTotalBlock = document.getElementById("snsTotalBlock");
