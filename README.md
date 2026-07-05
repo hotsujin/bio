@@ -3,7 +3,7 @@
 한수진 (Sujin Han) 개인 **링크인바이오** 페이지.
 litt.ly / Linktree 를 대체하는 self-hosted 한 페이지짜리 정적 사이트.
 
-- **Live** — https://hotsujin.github.io/bio/
+- **Live** — 아직 비공개 (공개 전환 시 https://hotsujin.github.io/bio/ 에 뜸)
 - **스택** — 순수 `index.html` 1개 (인라인 CSS/JS, 빌드 없음) + `assets/` 이미지·데이터
 - **베이스** — [johnfkoo951/cmds-bio](https://github.com/johnfkoo951/cmds-bio) (구요한)를 포크 가이드에 따라 가져와 전면 교체
 
