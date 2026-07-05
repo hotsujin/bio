@@ -1,0 +1,25 @@
+name: Refresh SNS followers
+
+# 매주 월요일 09:00 KST (00:00 UTC)에 팔로워 수를 재수집해 자동 커밋.
+# 수집 실패 시 기존 값 유지(스크립트가 부분 실패에 안전) — 커밋할 변경이 없으면 아무 일도 안 함.
+on:
+  schedule:
+    - cron: "0 0 * * 1"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Collect follower counts
+        run: bash scripts/refresh-followers.sh
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/followers.json
+          git diff --cached --quiet || { git commit -m "chore: SNS 팔로워 자동 갱신"; git push; }

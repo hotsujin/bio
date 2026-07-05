@@ -1,0 +1,27 @@
+{
+  "asOf": "2026-07-05",
+  "note": "scripts/refresh-followers.sh 로 갱신 (GitHub Actions가 매주 월요일 자동 실행). 새 SNS 계정이 생기면 platforms에 항목을 추가하고 스크립트에 수집 함수를 더한다.",
+  "platforms": [
+    {
+      "id": "instagram",
+      "label": "Instagram",
+      "count": 0,
+      "display": "",
+      "approx": false
+    },
+    {
+      "id": "github",
+      "label": "GitHub",
+      "count": 0,
+      "display": "",
+      "approx": false
+    },
+    {
+      "id": "email",
+      "label": "Email",
+      "count": null,
+      "display": "",
+      "approx": false
+    }
+  ]
+}

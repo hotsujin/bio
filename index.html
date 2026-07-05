@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="ko" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>한수진 (Sujin Han) — AI 커뮤니케이터 · 수콘 대표</title>
+    <meta name="description" content="한수진 (Sujin Han) — AI 커뮤니케이터 · AI 스타트업 수콘 대표. 생성형 AI 강의, 업무 자동화, 나를 위한 AI 시스템. 강의 문의와 모든 공개 링크를 한 곳에.">
+    <meta name="theme-color" content="#2e4a3d" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0a0b08" media="(prefers-color-scheme: dark)">
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+    <link rel="canonical" href="https://hotsujin.github.io/bio/">
+
+    <!-- Pre-paint theme (prevents dark-mode white flash on load) -->
+    <script>
+        (function () {
+            try {
+                var saved = localStorage.getItem("bio-theme");
+                var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+                document.documentElement.setAttribute("data-theme", saved || (prefersDark ? "dark" : "light"));
+            } catch (e) {}
+            document.documentElement.className += " js";
+        })();
+    </script>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:site_name" content="한수진 · SUCONN AI">
+    <meta property="og:title" content="한수진 (Sujin Han) — AI 커뮤니케이터 · 수콘 대표">
+    <meta property="og:description" content="생성형 AI 강의 · 업무 자동화 · 나를 위한 AI 시스템. 강의 문의와 모든 공개 링크를 한 곳에.">
+    <meta property="og:url" content="https://hotsujin.github.io/bio/">
+    <meta property="og:image" content="https://hotsujin.github.io/bio/assets/og-bio.png">
+    <meta property="og:image:secure_url" content="https://hotsujin.github.io/bio/assets/og-bio.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="한수진 Sujin Han · SUCONN AI bio card">
+    <meta property="og:locale" content="ko_KR">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="한수진 (Sujin Han) — AI 커뮤니케이터 · 수콘 대표">
+    <meta name="twitter:description" content="생성형 AI 강의 · 업무 자동화 · 나를 위한 AI 시스템. 모든 공개 링크를 한 곳에.">
+    <meta name="twitter:image" content="https://hotsujin.github.io/bio/assets/og-bio.png">
+    <meta name="twitter:image:alt" content="한수진 Sujin Han · SUCONN AI bio card">
+
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+    <link rel="preload" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css"></noscript>
+    <style>
+        :root {
+            --font-sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Pretendard Variable", "Pretendard", sans-serif;
+            --brand: #2e4a3d;
+            --brand-bright: #5f8a72;
+            --sand: #c9944f;
+            --sand-light: #e0b97e;
+            --bg: #faf8f2;
+            --bg-elev: #fffdf7;
+            --bg-subtle: #f3efe4;
+            --fg: #14130f;
+            --fg-muted: #55524a;
+            --fg-subtle: #8f8b7f;
+            --border: #e7e2d2;
+            --border-strong: #d4cfbd;
+            --accent: var(--brand);
+            --accent-strong: #223a2f;
+            --accent-soft: #ecf1e9;
+            --shadow: 0 30px 80px -44px rgba(46, 74, 61, 0.42);
+            --focus: 0 0 0 3px color-mix(in srgb, var(--accent) 24%, transparent);
+        }
+
+        [data-theme="dark"] {
+            --bg: #0a0b08;
+            --bg-elev: #12140f;
+            --bg-subtle: #0e100b;
+            --fg: #f2f3ee;
+            --fg-muted: #a3a196;
+            --fg-subtle: #67655b;
+            --border: #20231a;
+            --border-strong: #2c3024;
+            --accent: var(--sand);
+            --accent-strong: var(--sand-light);
+            --accent-soft: #26200f;
+            --shadow: 0 30px 90px -46px rgba(0, 0, 0, 0.8);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+        * { margin: 0; }
+        html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+        body {
+            min-height: 100dvh;
+            font-family: var(--font-sans);
+            color: var(--fg);
+            background: var(--bg-elev);
+            line-height: 1.5;
+            letter-spacing: -0.012em;
+            -webkit-font-smoothing: antialiased;
+            transition: background .25s, color .25s;
+        }
+        a { color: inherit; text-decoration: none; }
+        button { font: inherit; }
+        img, svg { display: block; }
+        .skip {
+            position: fixed;
+            left: 16px;
+            top: 16px;
+            z-index: 20;
+            transform: translateY(-180%);
+            border-radius: 999px;
+            background: var(--fg);
+            color: var(--bg);
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .skip:focus { transform: translateY(0); outline: none; box-shadow: var(--focus); }
+
+        .page {
+            width: min(100%, 596px);
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        .bio-card {
+            min-height: 100dvh;
+            overflow: hidden;
+            border: 0;
+            border-radius: 0;
+            background: var(--bg-elev);
+            box-shadow: none;
+            animation: rise .55s cubic-bezier(.2,.7,.3,1) both;
+        }
+
+        @keyframes rise {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: none; }
+        }
+
+        .hero {
+            position: relative;
+            min-height: 330px;
+            padding: 28px;
+            background:
+                radial-gradient(420px 260px at 20% 4%, rgba(127,174,147,0.9), transparent 64%),
+                radial-gradient(460px 220px at 92% 18%, rgba(224,185,126,0.5), transparent 66%),
+                linear-gradient(135deg, #16241c 0%, var(--brand) 48%, #6d8577 100%);
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: .26;
+            background-image:
+                linear-gradient(rgba(255,255,255,.16) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,.14) 1px, transparent 1px);
+            background-size: 42px 42px;
+            mask-image: linear-gradient(to bottom, black 0%, transparent 84%);
+        }
+
+        .hero-controls {
+            position: absolute;
+            top: 22px;
+            right: 22px;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .theme-btn, .lang-btn {
+            display: inline-grid;
+            height: 40px;
+            place-items: center;
+            border: 1px solid rgba(255,255,255,.30);
+            border-radius: 999px;
+            background: rgba(255,255,255,.16);
+            color: #fff;
+            cursor: pointer;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            transition: transform .18s, background .18s, border-color .18s;
+        }
+        .theme-btn { width: 40px; }
+        .lang-btn {
+            width: 48px;
+            font-size: 12px;
+            font-weight: 900;
+            letter-spacing: .04em;
+        }
+        .theme-btn:hover, .lang-btn:hover { transform: translateY(-1px); background: rgba(255,255,255,.24); }
+        .theme-btn:focus-visible, .lang-btn:focus-visible { outline: none; box-shadow: 0 0 0 3px rgba(255,255,255,.35); }
+        .theme-btn svg { width: 18px; height: 18px; }
+
+        .hero-lockup {
+            position: relative;
+            z-index: 1;
+            min-height: 274px;
+            color: #fff;
+        }
+
+        .hero-photo {
+            position: absolute;
+            top: 58px;
+            right: 0;
+            width: 168px;
+            height: 168px;
+            flex: 0 0 auto;
+            border: 4px solid rgba(255,255,255,.88);
+            border-radius: 36px;
+            background: #fff;
+            object-fit: cover;
+            object-position: 50% 30%;
+            box-shadow: 0 18px 38px -22px rgba(0,0,0,.70);
+        }
+
+        .hero-copy {
+            position: absolute;
+            left: 0;
+            right: 210px;
+            top: 90px;
+            bottom: auto;
+            padding: 0;
+        }
+        .hero-brand {
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: rgba(255,255,255,.88);
+            font-size: 16px;
+            font-weight: 900;
+            letter-spacing: .02em;
+        }
+        .hero-brand img { width: 34px; height: 34px; object-fit: contain; border-radius: 9px; }
+        .hero-copy strong {
+            display: block;
+            font-size: clamp(24px, 4.45vw, 30px);
+            line-height: .98;
+            letter-spacing: -0.055em;
+            text-transform: uppercase;
+        }
+        .hero-copy strong span {
+            display: block;
+            white-space: nowrap;
+        }
+        .hero-copy .hero-subtitle {
+            display: block;
+            margin-top: 14px;
+            max-width: 23rem;
+            color: rgba(255,255,255,.76);
+            font-size: 13.5px;
+            font-weight: 600;
+            letter-spacing: -0.015em;
+        }
+
+        .identity {
+            padding: 26px 28px 8px;
+            text-align: center;
+        }
+
+        .name {
+            display: inline-flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            font-size: clamp(25px, 6vw, 32px);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.045em;
+        }
+        .name span { font-weight: 700; }
+        .verified {
+            width: 20px;
+            height: 20px;
+            color: var(--brand-bright);
+        }
+        [data-theme="dark"] .verified { color: var(--accent); }
+
+        .role {
+            margin: 12px auto 0;
+            max-width: 34rem;
+            color: var(--fg);
+            font-size: 14.5px;
+            font-weight: 700;
+            line-height: 1.55;
+        }
+
+        .lede {
+            margin: 12px auto 0;
+            max-width: 32rem;
+            color: var(--fg-muted);
+            font-size: 15px;
+            line-height: 1.72;
+        }
+        .lede strong {
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        .cred-list {
+            margin-top: 20px;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            background: var(--bg-subtle);
+            padding: 4px 16px;
+            text-align: left;
+        }
+        .cred {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 2px 10px;
+            padding: 9px 0;
+            border-bottom: 1px solid var(--border);
+            line-height: 1.45;
+        }
+        .cred:last-child { border-bottom: 0; }
+        .cred strong {
+            flex: 0 0 auto;
+            min-width: 76px;
+            color: var(--fg);
+            font-size: 14.5px;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            font-variant-numeric: tabular-nums;
+        }
+        .cred span {
+            flex: 1 1 12rem;
+            color: var(--fg-muted);
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .cred span a {
+            color: var(--accent);
+            font-weight: 750;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+            text-decoration-color: color-mix(in srgb, var(--accent) 45%, transparent);
+        }
+        .cred span a:hover { text-decoration-color: var(--accent); }
+
+        .sns-total {
+            padding: 20px 26px 0;
+            text-align: center;
+        }
+        .sns-total[hidden] { display: none; }
+        .sns-total strong {
+            display: block;
+            color: var(--fg);
+            font-size: 27px;
+            font-weight: 850;
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+            font-variant-numeric: tabular-nums;
+        }
+        .sns-total span {
+            display: block;
+            margin-top: 5px;
+            color: var(--fg-subtle);
+            font-size: 12px;
+            font-weight: 650;
+        }
+
+        .socials {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 14px 26px 12px;
+        }
+        .social {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 5px;
+            color: var(--fg-muted);
+        }
+        .social-ico {
+            display: grid;
+            width: 43px;
+            height: 43px;
+            place-items: center;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            transition: transform .15s, border-color .15s, background .15s;
+        }
+        .social:hover { color: var(--accent); }
+        .social:hover .social-ico {
+            transform: translateY(-2px);
+            border-color: var(--accent);
+            background: var(--bg-elev);
+        }
+        .social-count {
+            min-height: 14px;
+            color: var(--fg-subtle);
+            font-size: 10.5px;
+            font-weight: 750;
+            line-height: 1.3;
+            font-variant-numeric: tabular-nums;
+            transition: color .15s;
+        }
+        .social:hover .social-count { color: var(--accent); }
+        .link:focus-visible, .filter-btn:focus-visible, .contact-cta:focus-visible, .copy-btn:focus-visible {
+            outline: none;
+            box-shadow: var(--focus);
+        }
+        .social:focus-visible { outline: none; }
+        .social:focus-visible .social-ico { box-shadow: var(--focus); }
+        .social svg { width: 19px; height: 19px; }
+
+        .action-panel {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 10px;
+            margin: 18px 24px 0;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            background: transparent;
+        }
+        .contact-cta, .copy-btn {
+            display: inline-flex;
+            min-height: 48px;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            font-size: 14px;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            transition: transform .15s, background .15s, color .15s, border-color .15s;
+        }
+        .contact-cta {
+            background: var(--accent);
+            color: #fff;
+        }
+        [data-theme="dark"] .contact-cta { color: #0b0f0d; }
+        .contact-cta:hover { transform: translateY(-1px); background: var(--accent-strong); }
+        .copy-btn {
+            border: 1px solid var(--border);
+            background: var(--bg-elev);
+            color: var(--fg-muted);
+            cursor: pointer;
+            padding: 0 14px;
+        }
+        .copy-btn:hover { transform: translateY(-1px); color: var(--accent); border-color: var(--accent); }
+        .copy-btn[data-copied="true"] {
+            border-color: var(--accent);
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+        }
+
+        .section-head {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 28px 24px 12px;
+        }
+        .section-head h2 {
+            font-size: 17px;
+            font-weight: 850;
+            letter-spacing: -0.03em;
+        }
+        .section-head p {
+            color: var(--fg-subtle);
+            font-size: 12.5px;
+            font-weight: 650;
+            white-space: nowrap;
+        }
+
+        .section-desc {
+            padding: 0 24px 12px;
+            color: var(--fg-muted);
+            font-size: 13.5px;
+            line-height: 1.65;
+        }
+        .updated-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            margin: 0 24px 14px;
+            padding: 6px 11px;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            color: var(--fg-subtle);
+            font-size: 11.5px;
+            font-weight: 700;
+        }
+        .updated-chip::before {
+            content: "";
+            width: 7px;
+            height: 7px;
+            border-radius: 999px;
+            background: var(--brand-bright);
+        }
+        [data-theme="dark"] .updated-chip::before { background: var(--accent); }
+        .updated-chip a { color: var(--accent); font-weight: 800; }
+
+        .filterbar {
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            /* 스크롤 컨테이너는 padding box 밖을 클리핑 — hover lift(1px)·Safari 서브픽셀 잘림 방지용 상단 여유 */
+            padding: 5px 24px 14px;
+            margin-top: -5px;
+            scrollbar-width: none;
+        }
+        .filterbar::-webkit-scrollbar { display: none; }
+        .filter-btn {
+            flex: 0 0 auto;
+            border: 1px solid var(--border);
+            border-radius: 999px;
+            background: var(--bg-subtle);
+            color: var(--fg-muted);
+            cursor: pointer;
+            padding: 9px 12px;
+            font-size: 13px;
+            font-weight: 750;
+            transition: transform .15s, color .15s, background .15s, border-color .15s;
+        }
+        .filter-btn:hover { transform: translateY(-1px); color: var(--accent); border-color: var(--accent); }
+        .filter-btn[aria-pressed="true"] {
+            border-color: color-mix(in srgb, var(--accent) 45%, var(--border));
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+        }
+
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 11px;
+            padding: 0 24px 12px;
+        }
+        .link {
+            display: grid;
+            grid-template-columns: 48px minmax(0, 1fr) auto;
+            gap: 14px;
+            align-items: center;
+            min-height: 78px;
+            border: 1px solid var(--border);
+            border-radius: 21px;
+            background: var(--bg-subtle);
+            padding: 14px 15px;
+            transition: transform .16s, border-color .16s, box-shadow .16s, background .16s;
+        }
+        .link:hover {
+            transform: translateY(-2px);
+            border-color: color-mix(in srgb, var(--accent) 42%, var(--border));
+            background: var(--bg-elev);
+            box-shadow: 0 18px 38px -30px color-mix(in srgb, var(--accent) 48%, transparent);
+        }
+        .link[hidden] { display: none; }
+        .link-ico {
+            display: grid;
+            width: 48px;
+            height: 48px;
+            place-items: center;
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background:
+                linear-gradient(135deg, color-mix(in srgb, var(--accent) 12%, var(--bg-elev)), var(--bg-elev));
+            color: var(--accent-strong);
+            font-size: 13px;
+            font-weight: 900;
+            letter-spacing: -0.03em;
+        }
+        .link-ico svg {
+            width: 23px;
+            height: 23px;
+            stroke: currentColor;
+            fill: none;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+        .link-ico svg.fill-icon { fill: currentColor; stroke: none; }
+        .link-title {
+            display: block;
+            color: var(--fg);
+            font-size: 15.5px;
+            font-weight: 820;
+            letter-spacing: -0.02em;
+        }
+        .link-sub {
+            display: block;
+            margin-top: 4px;
+            overflow: hidden;
+            color: var(--fg-muted);
+            font-size: 12.7px;
+            font-weight: 560;
+            line-height: 1.35;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .link-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            margin-top: 8px;
+        }
+        .link-tag {
+            display: inline-flex;
+            align-items: center;
+            min-height: 20px;
+            padding: 2px 7px;
+            border-radius: 999px;
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            font-size: 10.8px;
+            font-weight: 760;
+            letter-spacing: -0.01em;
+            line-height: 1;
+        }
+        [data-theme="dark"] .link-tag { color: var(--accent); }
+        .link-url {
+            display: block;
+            margin-top: 7px;
+            overflow: hidden;
+            color: var(--fg-subtle);
+            font-family: ui-monospace, "SF Mono", Menlo, monospace;
+            font-size: 10.5px;
+            font-weight: 600;
+            letter-spacing: 0;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .link:hover .link-url { color: var(--fg-muted); }
+        .link-arrow {
+            color: var(--fg-subtle);
+            transition: transform .16s, color .16s;
+        }
+        .link:hover .link-arrow {
+            transform: translateX(2px);
+            color: var(--accent);
+        }
+        .link-arrow svg { width: 18px; height: 18px; }
+
+        .focus {
+            margin: 16px 24px 0;
+            padding: 20px;
+            border: 1px solid color-mix(in srgb, var(--accent) 22%, var(--border));
+            border-radius: 26px;
+            background:
+                radial-gradient(360px 180px at 0% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 68%),
+                var(--bg-subtle);
+        }
+        .focus h2 {
+            font-size: 17px;
+            font-weight: 850;
+            letter-spacing: -0.03em;
+        }
+        .focus p {
+            margin-top: 9px;
+            color: var(--fg-muted);
+            font-size: 13.5px;
+            line-height: 1.65;
+        }
+        .focus-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 8px;
+            margin-top: 16px;
+        }
+        .focus-item {
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            background: color-mix(in srgb, var(--bg-elev) 70%, transparent);
+            padding: 12px;
+            color: var(--fg-muted);
+            font-size: 12.5px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+        .focus-item strong {
+            display: block;
+            margin-bottom: 4px;
+            color: var(--fg);
+            font-size: 13px;
+        }
+
+        .foot {
+            padding: 24px 26px 28px;
+            color: var(--fg-subtle);
+            text-align: center;
+            font-size: 12px;
+            font-weight: 560;
+            line-height: 1.8;
+        }
+        .foot a {
+            color: var(--accent);
+            font-weight: 800;
+        }
+
+        @media (max-width: 520px) {
+            .page { padding: 0; }
+            .bio-card { border-radius: 0; }
+            .hero { min-height: 360px; padding: 22px; }
+            .hero-controls { top: 18px; right: 18px; }
+            .lang-btn { width: 44px; height: 40px; }
+            .hero-lockup {
+                min-height: 316px;
+                text-align: left;
+            }
+            .hero-brand { font-size: 14px; gap: 8px; }
+            .hero-brand img { width: 30px; height: 30px; }
+            .hero-photo { top: 58px; right: 0; width: 122px; height: 122px; border-radius: 30px; }
+            .hero-copy { left: 0; right: 0; top: 184px; bottom: auto; padding: 0; }
+            .hero-copy strong { font-size: clamp(24px, 7.3vw, 29px); line-height: 1.02; }
+            .hero-copy .hero-subtitle { max-width: 17rem; margin-top: 12px; font-size: 13px; }
+            .identity { padding: 24px 20px 8px; }
+            .role { font-size: 13.7px; }
+            .lede { font-size: 14px; }
+            .cred-list { padding: 2px 14px; }
+            .cred strong { min-width: 68px; font-size: 14px; }
+            .cred span { font-size: 12.5px; }
+            .sns-total { padding: 18px 20px 0; }
+            .section-desc { padding-left: 18px; padding-right: 18px; }
+            .updated-chip { margin-left: 18px; margin-right: 18px; }
+            .action-panel {
+                grid-template-columns: 1fr;
+                margin: 18px 18px 0;
+            }
+            .link-sub { white-space: normal; }
+            .link-tags { gap: 4px; }
+            .section-head, .filterbar, .links { padding-left: 18px; padding-right: 18px; }
+            .section-head { align-items: flex-start; flex-direction: column; gap: 4px; }
+            .section-head p { white-space: normal; }
+            .link { grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; padding: 13px; }
+            .link-ico { width: 44px; height: 44px; border-radius: 15px; }
+            .focus { margin-inline: 18px; padding: 18px; }
+            .focus-list { grid-template-columns: 1fr; }
+        }
+
+        html:not(.js) .hero-controls,
+        html:not(.js) .copy-btn,
+        html:not(.js) .filterbar { display: none; }
+
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+            *, *::before, *::after {
+                animation-duration: .001ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: .001ms !important;
+            }
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "한수진",
+      "alternateName": ["Sujin Han"],
+      "jobTitle": ["Founder & CEO, Sucon", "Director, Korea AI Literacy Association", "AI Instructor"],
+      "affiliation": [
+        {"@type": "Organization", "name": "Sucon"},
+        {"@type": "Organization", "name": "Korea AI Literacy Association"}
+      ],
+      "url": "https://hotsujin.github.io/bio/",
+      "email": "mailto:h_sj0525@naver.com",
+      "sameAs": [
+        "https://hotsujin.github.io/suconn-ai/",
+        "https://www.instagram.com/wellme.seoul/",
+        "https://github.com/hotsujin"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip" href="#links" data-ko="링크 목록으로 이동" data-en="Skip to links">링크 목록으로 이동</a>
+    <main class="page">
+        <article class="bio-card" aria-label="한수진 링크인바이오" data-label-ko="한수진 링크인바이오" data-label-en="Sujin Han link-in-bio">
+            <header class="hero">
+                <div class="hero-controls">
+                    <button class="lang-btn" id="langBtn" type="button" aria-label="Switch to English">EN</button>
+                    <button class="theme-btn" id="themeBtn" type="button" aria-label="다크 모드로 전환" aria-pressed="false">
+                        <svg id="themeIcon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A8.5 8.5 0 1111.2 3 6.6 6.6 0 0021 12.8z"/></svg>
+                    </button>
+                </div>
+                <div class="hero-lockup">
+                    <span class="hero-brand" lang="en"><img src="assets/apple-touch-icon.png" alt="" aria-hidden="true">SUCONN AI</span>
+                    <img class="hero-photo" src="assets/profile-sujin.jpg" alt="한수진 대표사진" data-alt-ko="한수진 대표사진" data-alt-en="Portrait of Sujin Han" width="800" height="800">
+                    <div class="hero-copy">
+                        <strong lang="en"><span>TEACH REAL AI</span><span>AUTOMATE THE WORK</span><span>BUILD MY OWN AI</span></strong>
+                        <span class="hero-subtitle" lang="ko" data-ko="생성형 AI 강의, 업무 자동화, 나를 위한 AI 시스템을 한곳에." data-en="Generative-AI lectures, work automation, and an AI system of my own — in one place.">생성형 AI 강의, 업무 자동화, 나를 위한 AI 시스템을 한곳에.</span>
+                    </div>
+                </div>
+            </header>
+
+            <section class="identity" aria-labelledby="profile-name">
+                <h1 class="name" id="profile-name">한수진 <span>Sujin Han</span>
+                    <svg class="verified" viewBox="0 0 24 24" fill="currentColor" role="img" aria-label="verified"><path d="M12 1l2.4 2.1 3.1-.5 1.3 2.9 2.9 1.3-.5 3.1L23 12l-2.3 2.6.5 3.1-2.9 1.3-1.3 2.9-3.1-.5L12 23l-2.4-2.1-3.1.5-1.3-2.9-2.9-1.3.5-3.1L1 12l2.3-2.6-.5-3.1 2.9-1.3L7 2.6l3.1.5L12 1z"/><path d="M10.6 14.6l-2.2-2.2-1.2 1.2 3.4 3.4 6-6-1.2-1.2-4.8 4.8z" fill="#fff"/></svg>
+                </h1>
+                <p class="role" data-ko="AI 커뮤니케이터 · AI 스타트업 수콘 대표 · 한국AI리터러시협회 이사" data-en="AI Communicator · Founder of AI startup Sucon · Director, Korea AI Literacy Association">AI 커뮤니케이터 · AI 스타트업 수콘 대표 · 한국AI리터러시협회 이사</p>
+                <p class="lede" data-ko-html="기업·공공기관·대학 현장에서 생성형 AI와 업무 자동화를 강의합니다. 코드 없이 말로 지은 <strong>‘나를 위한 AI 시스템’</strong>의 구조와 기록을 공개합니다." data-en-html="I teach generative AI and work automation for companies, public institutions, and universities — and I publish the structure of <strong>an AI system built for me, in plain words, without code</strong>.">기업·공공기관·대학 현장에서 생성형 AI와 업무 자동화를 강의합니다. 코드 없이 말로 지은 <strong>‘나를 위한 AI 시스템’</strong>의 구조와 기록을 공개합니다.</p>
+                <div class="cred-list" aria-label="대표 활동 하이라이트" data-label-ko="대표 활동 하이라이트" data-label-en="Career highlights">
+                    <p class="cred"><strong data-ko="수콘" data-en="Sucon">수콘</strong><span data-ko="AI 스타트업 대표 · 누적 지원/투자 4억원 (2020~)" data-en="Founder &amp; CEO of AI startup Sucon · ₩400M cumulative grants &amp; investment (2020–)">AI 스타트업 대표 · 누적 지원/투자 4억원 (2020~)</span></p>
+                    <p class="cred"><strong data-ko="강의" data-en="Lectures">강의</strong><span data-ko="한국화이자제약 · GS건설 · 한국수력원자력 · 금융권 · 연세대 등 기업·공공·대학 출강" data-en="Pfizer Korea · GS E&amp;C · KHNP · finance firms · Yonsei Univ. and more">한국화이자제약 · GS건설 · 한국수력원자력 · 금융권 · 연세대 등 기업·공공·대학 출강</span></p>
+                    <p class="cred"><strong data-ko="저서" data-en="Book">저서</strong><span data-ko="『ChatGPT 입문서 — 인공지능을 활용한 생산성 향상과 수익 창출』" data-en="Author, an intro book on ChatGPT — productivity &amp; monetization with AI">『ChatGPT 입문서 — 인공지능을 활용한 생산성 향상과 수익 창출』</span></p>
+                    <p class="cred"><strong data-ko="뤼튼" data-en="Wrtn">뤼튼</strong><span data-ko="공식 인증 컨설턴트 (WWC 1기)" data-en="Certified consultant, Wrtn Technologies (WWC 1st cohort)">공식 인증 컨설턴트 (WWC 1기)</span></p>
+                    <p class="cred"><strong data-ko="GPTers" data-en="GPTers">GPTers</strong><span data-ko="국내 최대 생성AI 커뮤니티 · 글쓰기/책쓰기 분야 운영진" data-en="Operator (writing &amp; book-writing), Korea's largest GenAI community">국내 최대 생성AI 커뮤니티 · 글쓰기/책쓰기 분야 운영진</span></p>
+                    <p class="cred"><strong data-ko="연세대" data-en="Yonsei">연세대</strong><span data-ko="일반대학원 언론홍보영상학 박사과정" data-en="Ph.D. program in Communication, Yonsei University">일반대학원 언론홍보영상학 박사과정</span></p>
+                </div>
+            </section>
+
+            <div class="sns-total" id="snsTotalBlock" hidden>
+                <strong id="snsTotal"></strong>
+                <span id="snsCaption" data-ko="SNS 팔로워·구독자 합계" data-en="Combined followers &amp; subscribers">SNS 팔로워·구독자 합계</span>
+            </div>
+            <nav class="socials" aria-label="소셜 링크" data-label-ko="소셜 링크" data-label-en="Social links">
+                <a class="social" href="https://www.instagram.com/wellme.seoul/" target="_blank" rel="noopener" aria-label="Instagram @wellme.seoul" data-label-ko="Instagram @wellme.seoul" data-label-en="Instagram @wellme.seoul"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.9.07 3.3.15 4.8 1.7 5 5 .06 1.3.07 1.6.07 4.8s0 3.5-.07 4.8c-.15 3.3-1.7 4.8-5 5-1.3.06-1.6.07-4.9.07s-3.6 0-4.9-.07c-3.3-.15-4.8-1.7-5-5C2.04 15.5 2 15.2 2 12s0-3.5.07-4.8c.15-3.3 1.7-4.8 5-5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.07-2.4.1-3.3 1-3.4 3.4C3.8 8.7 3.8 9 3.8 12s0 3.3.07 4.5c.1 2.4 1 3.3 3.4 3.4 1.2.06 1.6.07 4.7.07s3.5 0 4.7-.07c2.4-.1 3.3-1 3.4-3.4.06-1.2.07-1.5.07-4.5s0-3.3-.07-4.5c-.1-2.4-1-3.3-3.4-3.4C15.5 4 15.1 4 12 4zm0 3.1a4.9 4.9 0 110 9.8 4.9 4.9 0 010-9.8zm0 1.8a3.1 3.1 0 100 6.2 3.1 3.1 0 000-6.2zm5-2.4a1.15 1.15 0 110 2.3 1.15 1.15 0 010-2.3z"/></svg></span><span class="social-count" data-sns="instagram" aria-hidden="true"></span></a>
+                <a class="social" href="https://github.com/hotsujin" target="_blank" rel="noopener" aria-label="GitHub hotsujin" data-label-ko="GitHub hotsujin" data-label-en="GitHub hotsujin"><span class="social-ico"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.5v-1.8c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></span><span class="social-count" data-sns="github" aria-hidden="true"></span></a>
+                <a class="social" href="mailto:h_sj0525@naver.com" aria-label="이메일 보내기" data-label-ko="이메일 보내기" data-label-en="Send email"><span class="social-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></span><span class="social-count" data-sns="email" aria-hidden="true"></span></a>
+            </nav>
+
+            <div class="action-panel" aria-label="주요 연락 액션" data-label-ko="주요 연락 액션" data-label-en="Primary contact actions">
+                <a class="contact-cta" href="mailto:h_sj0525@naver.com?subject=강의%20·%20협업%20문의" data-ko="강의 · 협업 문의하기" data-en="Invite / Collaborate">강의 · 협업 문의하기</a>
+                <button class="copy-btn" id="copyEmail" type="button" data-copy="h_sj0525@naver.com" data-ko="Email 복사" data-en="Copy email">Email 복사</button>
+            </div>
+
+            <section aria-labelledby="links-title" id="links">
+                <div class="section-head">
+                    <h2 id="links-title" data-ko="수콘AI 게이트웨이" data-en="SUCONN AI Gateway">수콘AI 게이트웨이</h2>
+                    <p id="filterStatus" aria-live="polite">전체 4개 링크</p>
+                </div>
+                <p class="section-desc" data-ko="제가 가르치고 만드는 것들이 궁금하다면 여기서 시작하세요 — 나를 위한 AI 시스템 포트폴리오, 글로벌 웰니스 브랜드, 공개 코드로 이어지는 공식 관문입니다." data-en="Curious what I teach and build? Start here — the official gateway to my AI-system portfolio, a global wellness brand, and open code.">제가 가르치고 만드는 것들이 궁금하다면 여기서 시작하세요 — 나를 위한 AI 시스템 포트폴리오, 글로벌 웰니스 브랜드, 공개 코드로 이어지는 공식 관문입니다.</p>
+                <p class="updated-chip"><span data-ko-html='26.07.05 업데이트 · <a href="https://hotsujin.github.io/suconn-ai/" target="_blank" rel="noopener">수콘AI 포트폴리오</a>와 함께 갱신' data-en-html='Updated 26.07.05 · maintained alongside the <a href="https://hotsujin.github.io/suconn-ai/" target="_blank" rel="noopener">SUCONN AI portfolio</a>'>26.07.05 업데이트 · <a href="https://hotsujin.github.io/suconn-ai/" target="_blank" rel="noopener">수콘AI 포트폴리오</a>와 함께 갱신</span></p>
+                <div class="filterbar" role="group" aria-label="링크 필터" data-label-ko="링크 필터" data-label-en="Link filters">
+                    <button class="filter-btn" type="button" data-filter="all" aria-pressed="true" data-ko="전체" data-en="All">전체</button>
+                    <button class="filter-btn" type="button" data-filter="work" aria-pressed="false" data-ko="프로젝트" data-en="Projects">프로젝트</button>
+                    <button class="filter-btn" type="button" data-filter="knowledge" aria-pressed="false" data-ko="지식·코드" data-en="Knowledge · Code">지식·코드</button>
+                    <button class="filter-btn" type="button" data-filter="profile" aria-pressed="false" data-ko="콘텐츠" data-en="Content">콘텐츠</button>
+                </div>
+
+                <div class="links">
+                    <a class="link" href="https://hotsujin.github.io/suconn-ai/" target="_blank" rel="noopener" data-tags="work knowledge" data-title-ko="수콘AI 포트폴리오" data-title-en="SUCONN AI Portfolio" data-desc-ko="코드 없이 말로 지은 ‘나를 위한 AI 시스템’ · 구조와 지표 공개" data-desc-en="An AI system built for me, in plain words — structure &amp; metrics in public" data-tags-ko="#수콘AI|#AI시스템|#포트폴리오" data-tags-en="#SuconnAI|#AISystem|#Portfolio">
+                        <span class="link-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 8h8v8H8z"/><path d="M8 4.5a3.5 3.5 0 0 0 0 7h.5M16 4.5a3.5 3.5 0 0 1 0 7h-.5M8 19.5a3.5 3.5 0 0 1 0-7h.5M16 19.5a3.5 3.5 0 0 0 0-7h-.5"/></svg></span>
+                        <span><span class="link-title">수콘AI 포트폴리오</span><span class="link-sub">코드 없이 말로 지은 ‘나를 위한 AI 시스템’ · 구조와 지표 공개</span><span class="link-tags" aria-hidden="true"><span class="link-tag">#수콘AI</span><span class="link-tag">#AI시스템</span><span class="link-tag">#포트폴리오</span></span><span class="link-url" aria-hidden="true">hotsujin.github.io/suconn-ai</span></span>
+                        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="link" href="https://www.instagram.com/wellme.seoul/" target="_blank" rel="noopener" data-tags="work profile" data-title-ko="Wellme · Instagram" data-title-en="Wellme · Instagram" data-desc-ko="K-웰니스 글로벌 콘텐츠 브랜드 · 영어로 발행하는 새 프로젝트" data-desc-en="A global K-wellness content brand · new project published in English" data-tags-ko="#Wellme|#KWellness|#Instagram" data-tags-en="#Wellme|#KWellness|#Instagram">
+                        <span class="link-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.6-9.2-9A5.2 5.2 0 0 1 12 6.6 5.2 5.2 0 0 1 21.2 12C19 16.4 12 21 12 21z"/></svg></span>
+                        <span><span class="link-title">Wellme · Instagram</span><span class="link-sub">K-웰니스 글로벌 콘텐츠 브랜드 · 영어로 발행하는 새 프로젝트</span><span class="link-tags" aria-hidden="true"><span class="link-tag">#Wellme</span><span class="link-tag">#KWellness</span><span class="link-tag">#Instagram</span></span><span class="link-url" aria-hidden="true">instagram.com/wellme.seoul</span></span>
+                        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="link" href="https://github.com/hotsujin" target="_blank" rel="noopener" data-tags="knowledge" data-title-ko="GitHub · hotsujin" data-title-en="GitHub · hotsujin" data-desc-ko="공개 코드 저장소 · 이 페이지도 여기서 만들었습니다" data-desc-en="Public repositories · this page lives here too" data-tags-ko="#GitHub|#OpenSource|#코드" data-tags-en="#GitHub|#OpenSource|#code">
+                        <span class="link-ico" aria-hidden="true"><svg class="fill-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.7.5.5 5.7.5 12c0 5.1 3.3 9.4 7.8 10.9.6.1.8-.2.8-.5v-1.8c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.4-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.2 1.2a11 11 0 015.8 0c2.2-1.5 3.2-1.2 3.2-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.8 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.6.8.5 4.5-1.5 7.8-5.8 7.8-10.9C23.5 5.7 18.3.5 12 .5z"/></svg></span>
+                        <span><span class="link-title">GitHub · hotsujin</span><span class="link-sub">공개 코드 저장소 · 이 페이지도 여기서 만들었습니다</span><span class="link-tags" aria-hidden="true"><span class="link-tag">#GitHub</span><span class="link-tag">#OpenSource</span><span class="link-tag">#코드</span></span><span class="link-url" aria-hidden="true">github.com/hotsujin</span></span>
+                        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                    <a class="link" href="https://github.com/hotsujin/bio" target="_blank" rel="noopener" data-tags="knowledge" data-title-ko="이 페이지 소스" data-title-en="This Page's Source" data-desc-ko="litt.ly 대신 index.html 한 장 · 포크해서 본인 것으로 바꾸세요" data-desc-en="One index.html instead of litt.ly · fork it and make it yours" data-tags-ko="#LinkInBio|#Fork|#정적사이트" data-tags-en="#LinkInBio|#Fork|#StaticSite">
+                        <span class="link-ico" aria-hidden="true"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6"/><path d="m10 13-2 2 2 2M14 13l2 2-2 2"/></svg></span>
+                        <span><span class="link-title">이 페이지 소스</span><span class="link-sub">litt.ly 대신 index.html 한 장 · 포크해서 본인 것으로 바꾸세요</span><span class="link-tags" aria-hidden="true"><span class="link-tag">#LinkInBio</span><span class="link-tag">#Fork</span><span class="link-tag">#정적사이트</span></span><span class="link-url" aria-hidden="true">github.com/hotsujin/bio</span></span>
+                        <span class="link-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+                    </a>
+                </div>
+            </section>
+
+            <section class="focus" aria-labelledby="focus-title">
+                <h2 id="focus-title" data-ko="지금 만드는 것" data-en="What I'm Building">지금 만드는 것</h2>
+                <p data-ko="강의 현장에서 만난 질문이 시스템이 되고, 시스템의 기록이 다시 강의와 콘텐츠가 됩니다. 이 페이지는 그 모든 작업으로 들어가는 가장 짧은 관문입니다." data-en="Questions from the lecture room become systems; the system's records become lectures and content again. This page is the shortest gateway into all of it.">강의 현장에서 만난 질문이 시스템이 되고, 시스템의 기록이 다시 강의와 콘텐츠가 됩니다. 이 페이지는 그 모든 작업으로 들어가는 가장 짧은 관문입니다.</p>
+                <div class="focus-list">
+                    <div class="focus-item"><strong>AI 교육</strong><span data-ko="기업·공공·대학 생성형 AI와 업무 자동화 강의" data-en="GenAI &amp; automation lectures for companies, gov, universities">기업·공공·대학 생성형 AI와 업무 자동화 강의</span></div>
+                    <div class="focus-item"><strong>수콘AI</strong><span data-ko="나를 위한 AI 시스템 · 공개 포트폴리오" data-en="My own AI system, documented in public">나를 위한 AI 시스템 · 공개 포트폴리오</span></div>
+                    <div class="focus-item"><strong>Wellme</strong><span data-ko="K-웰니스 글로벌 SNS 콘텐츠 브랜드" data-en="A global K-wellness content brand on SNS">K-웰니스 글로벌 SNS 콘텐츠 브랜드</span></div>
+                    <div class="focus-item"><strong>세컨드 브레인</strong><span data-ko="옵시디언 지식 시스템 → 강의·콘텐츠로" data-en="An Obsidian knowledge system feeding lectures &amp; content">옵시디언 지식 시스템 → 강의·콘텐츠로</span></div>
+                </div>
+            </section>
+
+            <footer class="foot">
+                © <span id="yr">2026</span> 한수진 Sujin Han · <a href="https://hotsujin.github.io/suconn-ai/">수콘AI</a> · Last updated: <time id="pageUpdated" datetime="2026-07-05">26.07.05</time><br>
+                <span data-ko-html='Template: <a href="https://github.com/johnfkoo951/cmds-bio" target="_blank" rel="noopener">cmds-bio</a> (구요한) · <a href="https://github.com/hotsujin/bio" target="_blank" rel="noopener">이 페이지 소스 보기</a>' data-en-html='Template: <a href="https://github.com/johnfkoo951/cmds-bio" target="_blank" rel="noopener">cmds-bio</a> by Yohan Koo · <a href="https://github.com/hotsujin/bio" target="_blank" rel="noopener">view source</a>'>Template: <a href="https://github.com/johnfkoo951/cmds-bio" target="_blank" rel="noopener">cmds-bio</a> (구요한) · <a href="https://github.com/hotsujin/bio" target="_blank" rel="noopener">이 페이지 소스 보기</a></span>
+            </footer>
+        </article>
+    </main>
+
+    <script>
+        (function () {
+            var root = document.documentElement;
+            var btn = document.getElementById("themeBtn");
+            var icon = document.getElementById("themeIcon");
+            var langBtn = document.getElementById("langBtn");
+            var currentLang = "ko";
+            try { currentLang = localStorage.getItem("bio-lang") || "ko"; } catch (e) {}
+            var saved = null; try { saved = localStorage.getItem("bio-theme"); } catch (e) {}
+            var prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+            function iconPath(theme) {
+                if (theme === "dark") {
+                    return '<circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/>';
+                }
+                return '<path d="M21 12.8A8.5 8.5 0 1111.2 3 6.6 6.6 0 0021 12.8z"/>';
+            }
+
+            function setTheme(theme) {
+                root.setAttribute("data-theme", theme);
+                btn.setAttribute("aria-pressed", theme === "dark" ? "true" : "false");
+                var darkLabel = currentLang === "en" ? "Switch to light mode" : "라이트 모드로 전환";
+                var lightLabel = currentLang === "en" ? "Switch to dark mode" : "다크 모드로 전환";
+                btn.setAttribute("aria-label", theme === "dark" ? darkLabel : lightLabel);
+                icon.innerHTML = iconPath(theme);
+                document.querySelectorAll('meta[name="theme-color"]').forEach(function (m) {
+                    m.setAttribute("content", theme === "dark" ? "#0a0b08" : "#2e4a3d");
+                });
+            }
+
+            function applyLanguage(lang) {
+                currentLang = lang === "en" ? "en" : "ko";
+                root.setAttribute("lang", currentLang);
+                try { localStorage.setItem("bio-lang", currentLang); } catch (e) {}
+                document.querySelectorAll("[data-ko][data-en]").forEach(function (el) {
+                    el.textContent = currentLang === "en" ? el.getAttribute("data-en") : el.getAttribute("data-ko");
+                });
+                document.querySelectorAll("[data-ko-html][data-en-html]").forEach(function (el) {
+                    el.innerHTML = currentLang === "en" ? el.getAttribute("data-en-html") : el.getAttribute("data-ko-html");
+                });
+                document.querySelectorAll(".link[data-title-ko]").forEach(function (link) {
+                    var title = currentLang === "en" ? link.getAttribute("data-title-en") : link.getAttribute("data-title-ko");
+                    var desc = currentLang === "en" ? link.getAttribute("data-desc-en") : link.getAttribute("data-desc-ko");
+                    var tags = (currentLang === "en" ? link.getAttribute("data-tags-en") : link.getAttribute("data-tags-ko")) || "";
+                    link.querySelector(".link-title").textContent = title;
+                    link.querySelector(".link-sub").textContent = desc;
+                    link.querySelector(".link-tags").innerHTML = tags.split("|").filter(Boolean).map(function (tag) {
+                        return '<span class="link-tag">' + tag + '</span>';
+                    }).join("");
+                });
+                document.querySelectorAll("[data-label-ko][data-label-en]").forEach(function (el) {
+                    el.setAttribute("aria-label", currentLang === "en" ? el.getAttribute("data-label-en") : el.getAttribute("data-label-ko"));
+                });
+                document.querySelectorAll("[data-alt-ko][data-alt-en]").forEach(function (el) {
+                    el.setAttribute("alt", currentLang === "en" ? el.getAttribute("data-alt-en") : el.getAttribute("data-alt-ko"));
+                });
+                langBtn.textContent = currentLang === "en" ? "KO" : "EN";
+                langBtn.setAttribute("aria-label", currentLang === "en" ? "한국어로 전환" : "Switch to English");
+                setTheme(root.getAttribute("data-theme") || (prefersDark ? "dark" : "light"));
+                if (typeof applyFilter === "function" && links && filterButtons && status) {
+                    var active = document.querySelector("[data-filter][aria-pressed='true']");
+                    applyFilter(active ? active.getAttribute("data-filter") : "all");
+                }
+            }
+
+            setTheme(saved || (prefersDark ? "dark" : "light"));
+            langBtn.addEventListener("click", function () { applyLanguage(currentLang === "en" ? "ko" : "en"); });
+            btn.addEventListener("click", function () {
+                var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+                setTheme(next);
+                try { localStorage.setItem("bio-theme", next); } catch (e) {}
+            });
+
+            document.getElementById("yr").textContent = String(new Date().getFullYear());
+
+            var filterButtons = Array.prototype.slice.call(document.querySelectorAll("[data-filter]"));
+            var links = Array.prototype.slice.call(document.querySelectorAll(".link[data-tags]"));
+            var status = document.getElementById("filterStatus");
+
+            function labelFor(key) {
+                if (currentLang === "en") {
+                    if (key === "work") return "Projects";
+                    if (key === "knowledge") return "Knowledge · Code";
+                    if (key === "profile") return "Content";
+                    return "All";
+                }
+                if (key === "work") return "프로젝트";
+                if (key === "knowledge") return "지식·코드";
+                if (key === "profile") return "콘텐츠";
+                return "전체";
+            }
+
+            function applyFilter(key) {
+                var visible = 0;
+                links.forEach(function (link) {
+                    var tags = (link.getAttribute("data-tags") || "").split(/\s+/);
+                    var show = key === "all" || tags.indexOf(key) !== -1;
+                    link.hidden = !show;
+                    if (show) visible += 1;
+                });
+                filterButtons.forEach(function (button) {
+                    button.setAttribute("aria-pressed", button.getAttribute("data-filter") === key ? "true" : "false");
+                });
+                status.textContent = labelFor(key) + " " + visible + (currentLang === "en" ? " links" : "개 링크");
+            }
+
+            filterButtons.forEach(function (button) {
+                button.addEventListener("click", function () {
+                    applyFilter(button.getAttribute("data-filter"));
+                });
+            });
+
+            var copyBtn = document.getElementById("copyEmail");
+            function fallbackCopy(text) {
+                var area = document.createElement("textarea");
+                area.value = text;
+                area.setAttribute("readonly", "");
+                area.style.position = "fixed";
+                area.style.opacity = "0";
+                document.body.appendChild(area);
+                area.select();
+                try { document.execCommand("copy"); } finally { document.body.removeChild(area); }
+            }
+
+            copyBtn.addEventListener("click", function () {
+                var text = copyBtn.getAttribute("data-copy");
+                var write = navigator.clipboard && navigator.clipboard.writeText
+                    ? navigator.clipboard.writeText(text)
+                    : Promise.resolve().then(function () { fallbackCopy(text); });
+                write.then(function () {
+                    copyBtn.textContent = currentLang === "en" ? "Copied" : "복사됨";
+                    copyBtn.setAttribute("data-copied", "true");
+                    setTimeout(function () {
+                        copyBtn.textContent = currentLang === "en" ? copyBtn.getAttribute("data-en") : copyBtn.getAttribute("data-ko");
+                        copyBtn.removeAttribute("data-copied");
+                    }, 1600);
+                }).catch(function () {
+                    fallbackCopy(text);
+                    copyBtn.textContent = currentLang === "en" ? "Copied" : "복사됨";
+                    copyBtn.setAttribute("data-copied", "true");
+                    setTimeout(function () {
+                        copyBtn.textContent = currentLang === "en" ? copyBtn.getAttribute("data-en") : copyBtn.getAttribute("data-ko");
+                        copyBtn.removeAttribute("data-copied");
+                    }, 1600);
+                });
+            });
+
+            var snsTotalBlock = document.getElementById("snsTotalBlock");
+            var snsTotalEl = document.getElementById("snsTotal");
+            var snsCaptionEl = document.getElementById("snsCaption");
+
+            function snsTotalDisplay(total) {
+                if (total < 1000) return String(total);
+                return (Math.floor(total / 1000) * 1000).toLocaleString("en-US") + "+";
+            }
+            function animateSnsTotal(total) {
+                if (!snsTotalEl) return;
+                var finalText = snsTotalDisplay(total);
+                var reduced = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+                if (reduced || typeof requestAnimationFrame !== "function") {
+                    snsTotalEl.textContent = finalText;
+                    return;
+                }
+                var target = total < 1000 ? total : Math.floor(total / 1000) * 1000;
+                var duration = 900;
+                var startTime = null;
+                function tick(now) {
+                    if (startTime === null) startTime = now;
+                    var t = Math.min((now - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - t, 3);
+                    snsTotalEl.textContent = t < 1 ? Math.round(target * eased).toLocaleString("en-US") : finalText;
+                    if (t < 1) requestAnimationFrame(tick);
+                }
+                requestAnimationFrame(tick);
+            }
+            function shortDate(iso) {
+                // "2026-07-05" → "26.07.05"
+                return (iso || "").slice(2).replace(/-/g, ".");
+            }
+            function applySnsData(data) {
+                if (!data || !data.platforms) return;
+                var total = 0;
+                data.platforms.forEach(function (p) {
+                    if (typeof p.count === "number") total += p.count;
+                    var el = document.querySelector('[data-sns="' + p.id + '"]');
+                    if (el) el.textContent = p.display || "";
+                });
+                // 합계는 1,000을 넘을 때만 노출 — 그 전에는 블록 자체를 숨긴다
+                if (total < 1000 || !snsCaptionEl) return;
+                var koCaption = "SNS 팔로워·구독자 합계 · " + shortDate(data.asOf) + " 기준";
+                var enCaption = "Combined followers & subscribers · as of " + shortDate(data.asOf);
+                snsCaptionEl.setAttribute("data-ko", koCaption);
+                snsCaptionEl.setAttribute("data-en", enCaption);
+                snsCaptionEl.textContent = currentLang === "en" ? enCaption : koCaption;
+                snsTotalBlock.hidden = false;
+                animateSnsTotal(total);
+            }
+            try {
+                fetch("assets/followers.json", { cache: "no-store" })
+                    .then(function (r) { return r.ok ? r.json() : null; })
+                    .then(applySnsData)
+                    .catch(function () {});
+            } catch (e) {}
+
+            applyLanguage(currentLang);
+        })();
+    </script>
+</body>
+</html>
