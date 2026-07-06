@@ -3,7 +3,7 @@
 한수진 (Sujin Han) 개인 **링크인바이오** 페이지.
 litt.ly / Linktree 를 대체하는 self-hosted 한 페이지짜리 정적 사이트.
 
-- **Live** — 아직 비공개 (공개 전환 + Pages 활성화 후 https://hotsujin.github.io/bio/ 에 뜸)
+- **Live** — https://hotsujin.github.io/bio/ (26.07.06 공개 전환 완료)
 - 공개 절차: repo public 전환 → gh api repos/hotsujin/bio/pages -X POST -f 'source[branch]=main' -f 'source[path]=/' (또는 Settings→Pages에서 main / 선택)
 - **스택** — 순수 `index.html` 1개 (인라인 CSS/JS, 빌드 없음) + `assets/` 이미지·데이터
 - **베이스** — [johnfkoo951/cmds-bio](https://github.com/johnfkoo951/cmds-bio) (구요한)를 포크 가이드에 따라 가져와 전면 교체
@@ -23,7 +23,7 @@ Claude Code에서 이 폴더(`~/bio`)를 열고 말로 시키면 됩니다.
 bash scripts/refresh-followers.sh
 
 # 3) 배포 = git push (1~2분 뒤 사이트 반영)
-#    (🚨 공개 전환+Pages 설정 전까지는 push=백업만, 사이트 반영 없음 — 현재 비공개 상태)
+#    (공개 상태 — push하면 1~2분 내 사이트 반영)
 git add -A && git commit -m "내용 갱신" && git push
 ```
 

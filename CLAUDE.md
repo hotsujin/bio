@@ -10,7 +10,7 @@
 
 ## 자주 하는 일
 - 팔로워 숫자 갱신: `bash scripts/refresh-followers.sh --deploy` (수집→커밋→푸시 원샷. 주 1회는 GitHub Actions가 자동으로 함)
-- 배포 = `git push` (GitHub Pages가 1~2분 내 자동 반영) (🚨 공개 전환+Pages 설정 전까지는 push=백업만, 사이트 반영 없음 — 현재 비공개 상태)
+- 배포 = `git push` (GitHub Pages가 1~2분 내 자동 반영 — 26.07.06 공개 전환 완료, 진짜로 공개됨에 유의)
 - 새 SNS 계정 추가: `assets/followers.json` 항목 + 스크립트 fetch 함수 + `index.html` 소셜 아이콘, 세 곳 모두.
 - SNS 합계 블록은 총합 1,000 미만이면 자동 숨김 — 억지로 켜지 말 것.
 - 현장 갤러리: `assets/gallery/photo-01.jpg`(~24, jpg/jpeg/png/webp)만 넣으면 자동 표시, 0장이면 섹션 숨김. HTML 수정 불필요 (`assets/gallery/README.md` 참고).
