@@ -15,6 +15,10 @@
 - SNS 합계 블록은 총합 1,000 미만이면 자동 숨김 — 억지로 켜지 말 것.
 - 현장 갤러리: `assets/gallery/photo-01.jpg`(~24, jpg/jpeg/png/webp)만 넣으면 자동 표시, 0장이면 섹션 숨김. HTML 수정 불필요 (`assets/gallery/README.md` 참고).
 
+## 미리보기
+- 바탕화면 **"링크인바이오 보기.app"** 더블클릭 = 서버 없이 브라우저로 열림 (file:// 방식 — 팔로워 숫자 표시만 생략될 수 있고 나머지는 동일).
+- 앱이 지워졌으면 재생성: `osacompile -o "$HOME/Desktop/링크인바이오 보기.app" -e 'do shell script "open -a \"Google Chrome\" \"/Users/hansujin/bio/index.html\" 2>/dev/null || open \"/Users/hansujin/bio/index.html\""'`
+
 ## 연결
 - 수콘AI 포트폴리오(`~/ai-portfolio/v2`, hotsujin.github.io/suconn-ai)와 직함·대표 수치를 공유 — 한쪽을 바꾸면 다른 쪽도 확인.
 - 템플릿 출처: [johnfkoo951/cmds-bio](https://github.com/johnfkoo951/cmds-bio) — 푸터 크레딧 유지.
