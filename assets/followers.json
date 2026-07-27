@@ -1,5 +1,5 @@
 {
-  "asOf": "2026-07-20",
+  "asOf": "2026-07-27",
   "note": "scripts/refresh-followers.sh 로 갱신 (GitHub Actions가 매주 월요일 자동 실행). 새 SNS 계정이 생기면 platforms에 항목을 추가하고 스크립트에 수집 함수를 더한다.",
   "platforms": [
     {
